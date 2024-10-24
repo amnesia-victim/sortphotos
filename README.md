@@ -11,8 +11,18 @@ SortPhotos is a Python script that organizes photos into folders by date and/or 
     python setup.py install
  
  Note that in addition to python you must have perl installed as the underlying exif library depends on perl.
+ The easiest and the most OS agnostic approach is to build docker image and run this script in docker container.
+
+    docker build . -t sortphotos
+
+
 
 # Usage
+
+In case of usage with docker
+    
+    docker run -it -v PATH/TO/PHOTOS:/opt sortphotos
+
 
 SortPhotos is intended to be used primarily from the command line.  To see all the options, invoke help
 
